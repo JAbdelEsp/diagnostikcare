@@ -31,23 +31,23 @@ describe("Flujo de navegación a detalle de usuario", () => {
     {
       id: 1,
       avatar: "/avatar1.png",
-      first_name: "Juan",
-      last_name: "Pérez",
-      email: "juan@example.com",
+      first_name: "John",
+      last_name: "Doe",
+      email: "john@doe.com",
     },
     {
       id: 2,
       avatar: "/avatar2.png",
-      first_name: "Ana",
-      last_name: "López",
-      email: "ana@example.com",
+      first_name: "Jane",
+      last_name: "Doe",
+      email: "jane@doe.com",
     },
   ];
 
   it("navega y muestra datos de detalle al hacer clic en un usuario", async () => {
     render(<Table columns={columns} rows={rows} />);
 
-    const userLink = screen.getByText("Juan Pérez");
+    const userLink = screen.getByText("John Doe");
     fireEvent.click(userLink);
 
     expect(mockPush).toHaveBeenCalledWith("/users/1");
@@ -64,8 +64,8 @@ describe("Flujo de navegación a detalle de usuario", () => {
     );
 
     await waitFor(() => {
-      expect(screen.getByText("Juan Pérez")).toBeInTheDocument();
-      expect(screen.getByText("juan@example.com")).toBeInTheDocument();
+      expect(screen.getByText("John Doe")).toBeInTheDocument();
+      expect(screen.getByText("john@doe.com")).toBeInTheDocument();
     });
   });
 });

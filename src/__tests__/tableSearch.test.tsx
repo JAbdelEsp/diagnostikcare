@@ -31,23 +31,23 @@ describe("Input de búsqueda en tabla de usuarios", () => {
     {
       id: 1,
       avatar: "/avatar1.png",
-      first_name: "Juan",
-      last_name: "Pérez",
-      email: "juan@example.com",
+      first_name: "John",
+      last_name: "Doe",
+      email: "john@doe.com",
     },
     {
       id: 2,
       avatar: "/avatar2.png",
-      first_name: "Ana",
-      last_name: "López",
-      email: "ana@example.com",
+      first_name: "Jane",
+      last_name: "Doe",
+      email: "jane@doe.com",
     },
     {
       id: 3,
       avatar: "/avatar3.png",
-      first_name: "Carlos",
-      last_name: "Ramírez",
-      email: "carlos@example.com",
+      first_name: "Charly",
+      last_name: "Doe",
+      email: "charly@doe.com",
     },
   ];
 
@@ -61,17 +61,17 @@ describe("Input de búsqueda en tabla de usuarios", () => {
     const input = screen.getByPlaceholderText("Buscar usuario...");
 
     // Asegura que los tres están al inicio
-    expect(screen.getByText("Juan Pérez")).toBeInTheDocument();
-    expect(screen.getByText("Ana López")).toBeInTheDocument();
-    expect(screen.getByText("Carlos Ramírez")).toBeInTheDocument();
+    expect(screen.getByText("John Doe")).toBeInTheDocument();
+    expect(screen.getByText("Jane Doe")).toBeInTheDocument();
+    expect(screen.getByText("Charly Doe")).toBeInTheDocument();
 
     // Filtrar por "ana"
     fireEvent.change(input, { target: { value: "ana" } });
 
     await waitFor(() => {
-      expect(screen.getByText("Ana López")).toBeInTheDocument();
-      expect(screen.queryByText("Juan Pérez")).not.toBeInTheDocument();
-      expect(screen.queryByText("Carlos Ramírez")).not.toBeInTheDocument();
+      expect(screen.getByText("Jane Doe")).toBeInTheDocument();
+      expect(screen.queryByText("John Doe")).not.toBeInTheDocument();
+      expect(screen.queryByText("Charly Doe")).not.toBeInTheDocument();
     });
   });
 });
