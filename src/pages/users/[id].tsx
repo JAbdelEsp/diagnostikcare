@@ -44,7 +44,7 @@ export default function Detail() {
           <p>ID: {selectedUser.id}</p>
         </div>
         <button className="btnBack" onClick={() => router.push("/")}>
-          Go Back
+          Regresar
         </button>
       </DetailCard>
     </main>

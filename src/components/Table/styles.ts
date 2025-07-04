@@ -16,6 +16,8 @@ export const DataGrid = styled("table")`
   }
   thead > tr {
     display: grid;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
   }
   thead > tr {
     grid-template-columns: 2fr 1fr;
@@ -33,6 +35,7 @@ export const DataGrid = styled("table")`
     margin-bottom: 14px;
     margin-top: 14px;
     background-color: var(--border-color);
+    border-radius: 10px;
     padding: 10px;
     &:hover {
       background-color: white;
