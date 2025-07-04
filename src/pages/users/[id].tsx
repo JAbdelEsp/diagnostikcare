@@ -26,8 +26,8 @@ export default function Detail() {
   if (!selectedUser) {
     return (
       <div>
-        <h1>User Not Found</h1>
-        <p>The user with ID {id} does not exist.</p>
+        <h1>Usuario no encontrado</h1>
+        <p>El usuario con el Id {id} no existe.</p>
       </div>
     );
   }

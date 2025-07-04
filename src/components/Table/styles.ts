@@ -32,15 +32,25 @@ export const DataGrid = styled("table")`
     grid-template-columns: 2fr 1fr;
     margin-bottom: 14px;
     margin-top: 14px;
+    background-color: var(--border-color);
+    padding: 10px;
+    &:hover {
+      background-color: white;
+    }
   }
 
   tbody > tr > td {
-    background-color: var(--border-color);
     img {
       position: relative;
       max-width: 50px;
       float: left;
       margin-right: 15px;
+    }
+    button {
+      margin-top: 12px;
+    }
+    img {
+      border-radius: 50%;
     }
   }
 

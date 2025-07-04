@@ -27,12 +27,12 @@ export default function Home() {
   }, [searchTerm, users]);
 
   const columns: any[] = [
-    { field: "id", headerName: "Data", width: 150 },
+    { field: "id", headerName: "Datos Generales", width: 150 },
     { field: "actions", headerName: "Acciones", width: 150 },
   ];
   return (
     <main className="container">
-      <h1>Welcome to DiagnostikCare</h1>
+      <h1>Bienvenido a Diagnostikare</h1>
       <input
         datatest-id="user-item"
         type="text"
@@ -42,7 +42,6 @@ export default function Home() {
         className="searchInput"
       />
       <Table columns={columns} rows={filteredUsers} />
-      <p>Your health, our priority.</p>
     </main>
   );
 }

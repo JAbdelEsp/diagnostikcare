@@ -80,4 +80,12 @@ export const GlobalStyles = createGlobalStyle`
     button[disabled]{
         opacity: 0.3;
     }
+    h1 {
+        font-size: 3.9vw;
+    }
+    @media screen and (max-width: 440px) {
+        h1 {
+          font-size: 3.9vw !important;
+        }
+    }
 `;
