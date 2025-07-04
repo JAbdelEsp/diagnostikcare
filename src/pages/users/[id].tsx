@@ -3,7 +3,7 @@ import type { AppDispatch, RootState } from "@/redux/store";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DetailCard } from "./styles";
+import { DetailCard } from "../../styles/users";
 import Preloader from "@/common/Loader";
 
 export default function Detail() {
